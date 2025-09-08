@@ -1,0 +1,115 @@
+{
+    "layer": "top",
+    "reload_style_on_change": true,
+    "modules-left": [
+        "custom/user-label",
+        "custom/user",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "custom/wp-label", "wireplumber",
+        "custom/br-label", "custom/brightness",
+        "custom/mem-label", "memory",
+        "custom/cpu-label", "cpu",
+        "custom/nw-label", "network",
+        "custom/bat-label", "battery"
+    ],
+    "modules-right": [
+        "custom/time",
+        "clock" /* date */
+    ],
+    "height": 24,
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
+    "custom/user-label": {
+        "format": "\uf007",
+        "tooltip": false
+    },
+    "custom/user": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/user.sh",
+        "tooltip": false,
+        "interval": "once"
+    },
+    "hyprland/workspaces": {
+        "sort-by-number": true,
+        "active-only": false,
+        "format": "{name} {icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "\uf192",
+            "default": "\uf10c"
+        }
+    },
+    "custom/wp-label": {
+        "format": "\uf025",
+        "tooltip": false
+    },
+    "wireplumber": {
+        "format": "{volume}%",
+        "format-muted": "\uf467",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 5
+    },
+    "custom/br-label": {
+        "format": "\uf522",
+        "tooltip": false
+    },
+    "custom/brightness": {
+        "format": "{}%",
+        "exec": "/home/jan/.config/waybar/scripts/brightness.sh",
+        "interval": 1,
+        "tooltip": false,
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-"
+    },
+    "custom/mem-label": {
+        "format": "\uefc5",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{percentage}%",
+        "tooltip-format": "RAM: {used} GiB / {avail} GiB\nSwap: {swapUsed} GiB / {swapAvail} GiB"
+    },
+    "custom/cpu-label": {
+        "format": "\uf4bc",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "{usage}%"
+    },
+    "custom/nw-label": {
+        "format": "\uf1eb",
+        "tooltip": false
+    },
+    "network": {
+        "format": "{essid}",
+        "format-alt": "{ifname}: {ipaddr}",
+        "format-disconnected": "disconnected",
+        "tooltip-format": "Interface: {ifname}\nIPv4: {ipaddr}\n\nSSID: {essid}\nFreq: {frequency}GHz\n  Up: {bandwidthUpBits}\n  Down: {bandwidthDownBits}",
+        "max-length": 24
+    },
+    "custom/bat-label": {
+        "format": "\uee9e",
+        "tooltip": false
+    },
+    "battery": {
+        "interval": 5,
+        "format": "{capacity}%",
+        "format-charging": "{capacity}% \udb85\udc0b",
+        "tooltip-format-discharging": "Capacity: {capacity}%\nWattage: {power}W\nRemaining Time: {time}\nCycles: {cycles}\nHealth: {health}%",
+        "tooltip-format-charging": "Capacity: {capacity}%\nWattage: {power}W\nTime until charged: {time}\nCycles: {cycles}\nHealth: {health}%"
+    },
+    "custom/time": {
+        "format": {},
+        "exec": "~/.config/waybar/scripts/time.sh",
+        "interval": 1,
+        "tooltip": false
+    },
+    "clock": {
+        "interval": 1,
+        "format": "{:%d %b %Y}",
+        "tooltip": false
+    }
+}

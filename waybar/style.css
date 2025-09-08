@@ -1,0 +1,85 @@
+@define-color none rgba(255, 255, 255, 0.01);
+@define-color bg rgba(22, 24, 26, 0.25);
+@define-color fg rgba(255, 255, 255, 1);
+@define-color background-accent rgba(255, 255, 255, 0.15);
+@define-color label rgba(94, 255, 108, 1);
+@define-color value rgba(255, 255, 255, 0.8);
+@define-color border rgba(255, 94, 241, 0.5);
+
+* {
+    font-family: "JetBrains Mono";
+    font-size: .75rem;
+
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+window#waybar {
+    background-color: @bg;
+    /* border: 1px solid @border; */
+    border-radius: 4px;
+}
+
+.modules-left, .modules-center, .modules-right {
+    /* background-color: @background; */
+    border-radius: 4px;
+}
+
+/* all non-last modules */
+#custom-user,
+#custom-time,
+#custom-brightness,
+#wireplumber,
+#memory,
+#cpu,
+#network {
+    border-right: 1px solid @background-accent;
+}
+
+/* labels */
+#custom-user-label,
+#custom-wp-label,
+#custom-br-label,
+#custom-mem-label,
+#custom-cpu-label,
+#custom-nw-label,
+#custom-bat-label,
+#custom-time,
+#clock {
+    color: @label;
+    padding-left: .8rem;
+    padding-right: .8rem;
+}
+
+/* increase icon size */
+#custom-user-label,
+#custom-wp-label,
+#custom-br-label,
+#custom-mem-label,
+#custom-cpu-label,
+#custom-nw-label,
+#custom-bat-label {
+    font-size: .9rem;
+}
+
+#custom-user,
+#custom-time,
+#clock,
+#wireplumber,
+#custom-brightness,
+#memory,
+#cpu,
+#network,
+#battery {
+    color: @value;
+    padding-right: 1em;
+}
+
+#workspaces button {
+    color: @value;
+}
+
+#workspaces button.active {
+    color: @label;
+}
