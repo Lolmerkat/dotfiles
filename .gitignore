@@ -1,0 +1,15 @@
+*
+
+# include files
+!.gitignore
+!README.md
+
+# include dirs
+!paintr/
+!paintr/*
+!waybar/
+!waybar/*
+!rofi/
+!rofi/*
+!hypr/
+!hypr/*
