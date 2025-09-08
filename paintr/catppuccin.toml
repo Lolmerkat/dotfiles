@@ -1,0 +1,12 @@
+[data]
+name = "Catppuccin"
+variant = "dark"
+version = "1.0"
+
+[colors]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+primary = "#cba6f7"
+secondary = "#89b4fa"
+accent = "#f38ba8"
+muted = "#6c7086"

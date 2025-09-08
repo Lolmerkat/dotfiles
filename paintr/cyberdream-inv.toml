@@ -1,0 +1,12 @@
+[data]
+name = "Cyberdream"
+variant = "dark-invert"
+version = "1.0"
+
+[colors]
+background = "#16181a"
+foreground = "#fffff"
+primary = "#ff5ef1"
+secondary = "#5eff6c"
+accent = "#f1ff5e"
+muted = "#1e2124"
