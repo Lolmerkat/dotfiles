@@ -1,0 +1,39 @@
+* {
+    none: #0000;
+    bg: #16181aff;
+    bg-semi: #16181a80;
+    bg-alt: #1e2124ff;
+    bg-highlight: #3c4048ff;
+    fg: #ffffffff;
+    grey: #7b8496ff;
+    blue: #5ea1ffff;
+    green: #5eff6cff;
+    cyan: #5ef1ffff;
+    red: #ff6e5eff;
+    yellow: #f1ff5eff;
+    magenta: #ff5ef1ff;
+    pink: #ff5ea0ff;
+    orange: #ffbd5eff;
+    purple: #bd5effff;
+}
+
+window {
+    background-color: #16181a80;
+
+    border: 1px;
+    border-radius: 8px 8px 0 0;
+    border-color: @magenta;
+
+    /* hide bottom border */
+    y-offset: 1px;
+}
+
+element.normal.normal {
+    color: @fg;
+    background-color: @bg-semi;
+}
+
+element.alternate.normal {
+    color: @fg;
+    background-color: @none;
+}

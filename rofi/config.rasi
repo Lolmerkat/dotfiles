@@ -30,4 +30,4 @@ window {
     anchor: south;
 }
 
-// @import "./themes/cyberdream.rasi";
+@import "themes/cyberdream.rasi"
