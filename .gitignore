@@ -1,6 +1,8 @@
 *
 
 # include files
+!.bashrc
+!.bash-prompt.sh
 !.gitignore
 !README.md
 
