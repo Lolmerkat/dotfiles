@@ -12,7 +12,8 @@
         "custom/mem-label", "memory",
         "custom/cpu-label", "cpu",
         "custom/nw-label", "network",
-        "custom/bat-label", "battery"
+        "custom/bat-label", "battery",
+        "custom/loc-label", "hyprland/language"
     ],
     "modules-right": [
         "custom/time",
@@ -100,6 +101,16 @@
         "format-charging": "{capacity}% \udb85\udc0b",
         "tooltip-format-discharging": "Capacity: {capacity}%\nWattage: {power}W\nRemaining Time: {time}\nCycles: {cycles}\nHealth: {health}%",
         "tooltip-format-charging": "Capacity: {capacity}%\nWattage: {power}W\nTime until charged: {time}\nCycles: {cycles}\nHealth: {health}%"
+    },
+    "custom/loc-label": {
+        "format": "\uf0ac",
+        "tooltip": false
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "en",
+        "format-de": "de",
+        "keyboard-name": "at-translated-set-2-keyboard"
     },
     "custom/time": {
         "format": {},
