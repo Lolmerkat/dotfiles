@@ -36,11 +36,9 @@
     "hyprland/workspaces": {
         "sort-by-number": true,
         "active-only": false,
-        "format": "{name} {icon}",
+        "format": "{name}",
         "on-click": "activate",
         "format-icons": {
-            "active": "\uf192",
-            "default": "\uf10c"
         }
     },
     "custom/wp-label": {

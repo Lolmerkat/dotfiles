@@ -80,10 +80,18 @@ window#waybar {
     padding-right: 1em;
 }
 
+#workspaces {
+    padding-left: .5em;
+}
+
 #workspaces button {
+    padding: 0em 0em;
+    font-style: italic;
     color: @value;
 }
 
 #workspaces button.active {
+    font-weight: 900;
+    font-style: normal;
     color: @label;
 }
