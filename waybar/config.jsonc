@@ -38,8 +38,6 @@
         "active-only": false,
         "format": "{name}",
         "on-click": "activate",
-        "format-icons": {
-        }
     },
     "custom/wp-label": {
         "format": "\uf025",
