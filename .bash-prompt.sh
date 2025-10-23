@@ -1,1 +1,1 @@
-.bash-prompt.sh
+../.bash-prompt.sh
