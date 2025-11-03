@@ -7,6 +7,8 @@
 !README.md
 
 # include dirs
+!nchat/
+!nchat/*
 !paintr/
 !paintr/*
 !waybar/
