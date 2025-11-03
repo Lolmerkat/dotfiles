@@ -25,9 +25,5 @@ configuration{
     kb-mode-complete: "Control+o";
 }
 
-window {
-    location: south;
-    anchor: south;
-}
-
+@import "layout.rasi"
 @import "themes/cyberdream.rasi"

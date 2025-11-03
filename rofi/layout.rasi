@@ -1,0 +1,46 @@
+window {
+    border-radius: 8px;
+    border: 1px;
+    margin: 0;
+    padding: 0;
+    width: 40%;
+}
+
+listview {
+    border: 1px 0px 0px 0px;
+    lines: 5;
+    margin: 0;
+    padding: 0;
+}
+
+num-rows, num-filtered-rows, textbox-prompt-colon, textbox-num-sep {
+    enabled: false;
+}
+
+entry {
+    padding: 0.33em 0.5em;
+    placeholder: "";
+}
+
+entry-icon {
+    horizontal-align: 0.5;
+    vertical-align: 0.5;
+}
+
+element {
+    padding: 0.33em 0.5em;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 1.2em;
+}
+
+scrollbar {
+    handle-width: 4px;
+    margin: 0;
+    padding: 0;
+}
