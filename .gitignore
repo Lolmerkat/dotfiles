@@ -1,20 +1,3 @@
-*
-
-# include files
-!.bashrc
-!.bash-prompt.sh
-!.gitignore
-!README.md
-
-# include dirs
-!nchat/
-!nchat/*
-!paintr/
-!paintr/*
-!waybar/
-!waybar/*
-!rofi/
-!rofi/*
-!rofi/themes/*
-!hypr/
-!hypr/*
+nchat/
+nchat/log.txt
+nchat/log.txt.1
