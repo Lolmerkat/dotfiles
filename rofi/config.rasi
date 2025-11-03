@@ -5,9 +5,9 @@ configuration{
     drun-display-format: "{icon} {name}";
     disable-history: false;
     sidebar-mode: false;
-    display-drun: " ";
-    display-run: " ";
-    display-window: " ";
+    display-drun: "";
+    display-run: "";
+    display-window: "";
 
     //adding vim keybindings
     kb-row-up: "Up,Control+k";
