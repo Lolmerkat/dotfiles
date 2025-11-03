@@ -1,39 +1,58 @@
 * {
-    none: #0000;
-    bg: #16181aff;
-    bg-semi: #16181a80;
     bg-alt: #1e2124ff;
     bg-highlight: #3c4048ff;
-    fg: #ffffffff;
-    grey: #7b8496ff;
+    bg-semi: #16181a80;
+    bg: #16181aff;
     blue: #5ea1ffff;
-    green: #5eff6cff;
     cyan: #5ef1ffff;
+    fg: #ffffffff;
+    green: #5eff6cff;
+    grey: #7b8496ff;
+    magenta: #ff5ef1ff;
+    none: #0000;
+    orange: #ffbd5eff;
+    pink: #ff5ea0ff;
+    purple: #bd5effff;
     red: #ff6e5eff;
     yellow: #f1ff5eff;
-    magenta: #ff5ef1ff;
-    pink: #ff5ea0ff;
-    orange: #ffbd5eff;
-    purple: #bd5effff;
+}
+
+* {
+    font: "JetBrains Mono 14";
 }
 
 window {
-    background-color: #16181a80;
-
-    border: 1px;
-    border-radius: 8px 8px 0 0;
+    background-color: #00000000;
     border-color: @magenta;
-
-    /* hide bottom border */
-    y-offset: 1px;
 }
 
-element.normal.normal {
+listview {
+    border-color: #ff5ef1aa;
+}
+
+entry {
     color: @fg;
+}
+
+element {
+    color: @fg;
+}
+
+element selected normal {
+    color: @bg;
+    background-color: #5eff6caa;
+}
+
+element normal.normal {
     background-color: @bg-semi;
+    color: @fg;
 }
 
-element.alternate.normal {
-    color: @fg;
+element alternate.normal {
     background-color: @none;
+    color: @fg;
+}
+
+scrollbar {
+    handle-color: @green;
 }
