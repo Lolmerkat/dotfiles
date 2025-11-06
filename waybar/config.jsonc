@@ -17,7 +17,8 @@
     ],
     "modules-right": [
         "custom/time",
-        "clock" /* date */
+        "clock", /* date */
+        "custom/power"
     ],
     "height": 24,
     "margin-top": 8,
@@ -118,5 +119,15 @@
         "interval": 1,
         "format": "{:%d %b %Y}",
         "tooltip": false
+    },
+    "custom/power": {
+        "format": "\uf011",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "~/.config/waybar/power_menu.xml",
+        "menu-actions": {
+            "shutdown": "poweroff",
+            "reboot": "reboot"
+        }
     }
 }
