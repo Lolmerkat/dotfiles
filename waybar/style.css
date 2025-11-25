@@ -16,92 +16,30 @@
 }
 
 window#waybar {
-    background-color: @bg;
-    /* border: 1px solid @border; */
-    border-radius: 6px;
+    background-color: rgba(0, 0, 0, .01);
 }
 
-.modules-left,
-.modules-center,
-.modules-right {
-    /* background-color: @background; */
-    border-radius: 4px;
+#custom-user-label, #custom-user {
+    background-color: @none;
 }
 
-/* all non-last modules */
-#custom-user,
-#custom-time,
-#custom-brightness,
-#wireplumber,
-#memory,
-#cpu,
-#network,
-#battery,
-#tray {
-    border-right: 1px solid @background-accent;
-}
 
-/* labels */
-#custom-user-label,
-#custom-wp-label,
-#custom-br-label,
-#custom-mem-label,
-#custom-cpu-label,
-#custom-nw-label,
-#custom-bat-label,
-#custom-loc-label,
-#custom-time,
-#clock,
-#custom-power {
+#custom-user-label {
+    border-radius: 8px 0 0 8px;
+    padding-left: 1em;
+    padding-right: 0.5em;
     color: @label;
-    padding-left: .8rem;
-    padding-right: .8rem;
 }
 
-/* increase icon size */
-#custom-user-label,
-#custom-wp-label,
-#custom-br-label,
-#custom-mem-label,
-#custom-cpu-label,
-#custom-nw-label,
-#custom-bat-label,
-#custom-loc-label,
-#custom-power {
-    font-size: .9rem;
-}
-
-#custom-user,
-#custom-time,
-#clock,
-#wireplumber,
-#custom-brightness,
-#memory,
-#cpu,
-#network,
-#battery,
-#language,
-#tray {
-    color: @value;
+#custom-user {
+    padding-left: 0.5em;
     padding-right: 1em;
+    color: @value;
 }
 
 #workspaces {
+    margin-left: .5em;
     padding-left: .5em;
-}
-
-#workspaces button {
-    padding: 0em 0em;
-    font-style: italic;
-    color: @value;
-}
-
-#workspaces button.active {
-    font-weight: 900;
-    font-style: normal;
-    color: @label;
-}
-
-menu {
-    border-radius: 4px;
+    padding-right: .5em;
+    background-color: @none;
 }
