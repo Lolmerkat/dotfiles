@@ -48,7 +48,8 @@ window#waybar {
 #custom-bat-label,
 #custom-loc-label,
 #custom-time,
-#clock {
+#clock,
+#custom-power {
     color: @label;
     padding-left: .8rem;
     padding-right: .8rem;
@@ -62,7 +63,8 @@ window#waybar {
 #custom-cpu-label,
 #custom-nw-label,
 #custom-bat-label,
-#custom-loc-label {
+#custom-loc-label,
+#custom-power {
     font-size: .9rem;
 }
 
@@ -94,4 +96,8 @@ window#waybar {
     font-weight: 900;
     font-style: normal;
     color: @label;
+}
+
+menu {
+    border-radius: 4px;
 }
