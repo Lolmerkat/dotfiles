@@ -21,7 +21,9 @@ window#waybar {
     border-radius: 6px;
 }
 
-.modules-left, .modules-center, .modules-right {
+.modules-left,
+.modules-center,
+.modules-right {
     /* background-color: @background; */
     border-radius: 4px;
 }
@@ -34,7 +36,8 @@ window#waybar {
 #memory,
 #cpu,
 #network,
-#battery {
+#battery,
+#tray {
     border-right: 1px solid @background-accent;
 }
 
@@ -77,7 +80,8 @@ window#waybar {
 #cpu,
 #network,
 #battery,
-#language {
+#language,
+#tray {
     color: @value;
     padding-right: 1em;
 }

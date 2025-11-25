@@ -16,6 +16,7 @@
         "custom/loc-label", "hyprland/language"
     ],
     "modules-right": [
+        "tray",
         "custom/time",
         "clock", /* date */
         "custom/power"
@@ -108,6 +109,9 @@
         "format-en": "en",
         "format-de": "de",
         "keyboard-name": "at-translated-set-2-keyboard"
+    },
+    "tray": {
+        "spacing": 5,
     },
     "custom/time": {
         "format": {},
