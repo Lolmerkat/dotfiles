@@ -1,4 +1,4 @@
-@define-color none rgba(255, 255, 255, 0.01);
+@define-color none rgba(0, 0, 0, .5);
 @define-color bg rgba(22, 24, 26, 0.25);
 @define-color fg rgba(255, 255, 255, 1);
 @define-color background-accent rgba(255, 255, 255, 0.15);
@@ -19,27 +19,118 @@ window#waybar {
     background-color: rgba(0, 0, 0, .01);
 }
 
-#custom-user-label, #custom-user {
+.modules-left,
+.modules-center,
+.modules-right {
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+#custom-user-label, #custom-user,
+#workspaces,
+#custom-wp-label, #wireplumber,
+#custom-br-label, #custom-brightness,
+#custom-mem-label, #memory,
+#custom-cpu-label, #cpu,
+#custom-nw-label, #network,
+#custom-bat-label, #battery,
+#custom-loc-label, #language,
+#tray,
+#custom-time, #clock,
+#custom-power {
     background-color: @none;
 }
 
-
-#custom-user-label {
+/* first labels of group */
+#custom-wp-label,
+#custom-user-label,
+#tray {
     border-radius: 8px 0 0 8px;
     padding-left: 1em;
     padding-right: 0.5em;
     color: @label;
 }
 
+/* left modules */
 #custom-user {
+    border-radius: 0 2px 2px 0;
     padding-left: 0.5em;
     padding-right: 1em;
     color: @value;
 }
 
 #workspaces {
-    margin-left: .5em;
+    margin-left: .25em;
     padding-left: .5em;
     padding-right: .5em;
-    background-color: @none;
+    border-radius: 2px 8px 8px 2px;
+}
+
+#workspaces button {
+    padding: 0;
+    font-style: italic;
+    color: @value;
+}
+
+#workspaces button.active {
+    font-style: normal;
+    font-weight: 900;
+    color: @label;
+}
+
+#custom-br-label,
+#custom-mem-label,
+#custom-cpu-label,
+#custom-nw-label,
+#custom-bat-label,
+#custom-loc-label {
+    padding-left: 1em;
+    padding-right: 0.5em;
+    color: @label;
+    border-radius: 4px 0 0 4px;
+    margin-left: .25em;
+}
+
+#wireplumber,
+#custom-brightness,
+#memory,
+#cpu,
+#network,
+#battery {
+    border-radius: 0 4px 4px 0;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    color: @value;
+}
+
+#language {
+    border-radius: 2px 8px 8px 0px;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    color: @value;
+}
+
+/* right modules */
+#tray {
+    border-radius: 8px 4px 4px 8px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 0.25em;
+}
+
+#custom-time,
+#clock {
+    border-radius: 4px;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: 0.25em;
+    color: @value;
+}
+
+#custom-power {
+    border-radius: 4px 8px 8px 4px;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    margin-left: 0.25em;
+    color: @label;
 }
