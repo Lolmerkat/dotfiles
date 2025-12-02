@@ -19,14 +19,14 @@
         "tray",
         "custom/time",
         "clock", /* date */
-        "custom/power"
+        "group/group-power"
     ],
     "height": 24,
     "margin-top": 8,
     "margin-left": 8,
     "margin-right": 8,
     "custom/user-label": {
-        "format": "\uf007",
+        "format": "󰣇",
         "tooltip": false
     },
     "custom/user": {
@@ -39,7 +39,7 @@
         "sort-by-number": true,
         "active-only": false,
         "format": "{name}",
-        "on-click": "activate",
+        "on-click": "activate"
     },
     "custom/wp-label": {
         "format": "\uf025",
@@ -124,14 +124,38 @@
         "format": "{:%d %b %Y}",
         "tooltip": false
     },
+    "group/group-power": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 250,
+            "children-class": "not-power",
+            "transition-left-to-right": false
+        },
+        "modules": [
+            "custom/power",
+            "custom/quit",
+            "custom/lock",
+            "custom/reboot"
+        ]
+    },
     "custom/power": {
-        "format": "\uf011",
+        "format": "󰐥",
         "tooltip": false,
-        "menu": "on-click",
-        "menu-file": "~/.config/waybar/power_menu.xml",
-        "menu-actions": {
-            "shutdown": "poweroff",
-            "reboot": "reboot"
-        }
-    }
+        "on-click": "poweroff"
+    },
+    "custom/quit": {
+        "format": "󰈆",
+        "tooltip": false,
+        "on-click": "hyprctl dispatch exit"
+    },
+    "custom/lock": {
+        "format": "󰌾",
+        "tooltip": false,
+        "on-click": "hyprlock"
+    },
+    "custom/reboot": {
+        "format": "󰜉",
+        "tooltip": false,
+        "on-click": "reboot"
+    },
 }

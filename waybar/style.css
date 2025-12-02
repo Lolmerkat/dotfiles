@@ -26,18 +26,38 @@ window#waybar {
     border-radius: 8px;
 }
 
-#custom-user-label, #custom-user,
+#custom-user-label {
+    font-size: 1rem;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+#custom-user {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+#custom-user-label,
+#custom-user,
 #workspaces,
-#custom-wp-label, #wireplumber,
-#custom-br-label, #custom-brightness,
-#custom-mem-label, #memory,
-#custom-cpu-label, #cpu,
-#custom-nw-label, #network,
-#custom-bat-label, #battery,
-#custom-loc-label, #language,
+#custom-wp-label,
+#wireplumber,
+#custom-br-label,
+#custom-brightness,
+#custom-mem-label,
+#memory,
+#custom-cpu-label,
+#cpu,
+#custom-nw-label,
+#network,
+#custom-bat-label,
+#battery,
+#custom-loc-label,
+#language,
 #tray,
-#custom-time, #clock,
-#custom-power {
+#custom-time,
+#clock,
+#group-power {
     background-color: @none;
 }
 
@@ -127,10 +147,15 @@ window#waybar {
     color: @value;
 }
 
-#custom-power {
-    border-radius: 4px 8px 8px 4px;
-    padding-left: 0.5em;
-    padding-right: 1em;
+#group-power {
     margin-left: 0.25em;
+    border-radius: 4px 8px 8px 4px;
+    padding-left: 1em;
+    padding-right: 1em;
     color: @label;
+}
+
+.not-power>* {
+    font-size: 1.2em;
+    margin-right: 1em;
 }
