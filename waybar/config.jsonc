@@ -42,7 +42,7 @@
         "on-click": "activate"
     },
     "custom/wp-label": {
-        "format": "\uf025",
+        "format": "\udb80\udecb",
         "tooltip": false
     },
     "wireplumber": {
