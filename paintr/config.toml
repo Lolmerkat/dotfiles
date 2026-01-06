@@ -1,0 +1,12 @@
+[output]
+dir = '/home/jan/wallpapers/originals'
+
+[scaled]
+enabled = true
+dir = '/home/jan/wallpapers'
+width = 1920
+height = 1200
+crop = true
+
+[download]
+dir = ''

@@ -1,0 +1,10 @@
+name = "cyberdream"
+
+[colors]
+palette = [
+    "#16181a",
+    "#5eff6c",
+    "#1e2124",
+    "#3c4048",
+    "#ff5ef1",
+]
