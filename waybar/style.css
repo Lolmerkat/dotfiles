@@ -1,161 +1,103 @@
-@define-color none rgba(0, 0, 0, .5);
-@define-color bg rgba(22, 24, 26, 0.25);
-@define-color fg rgba(255, 255, 255, 1);
-@define-color background-accent rgba(255, 255, 255, 0.15);
-@define-color label rgba(94, 255, 108, 1);
-@define-color value rgba(255, 255, 255, 0.8);
-@define-color border rgba(255, 94, 241, 0.5);
+@import "colors.css";
 
 * {
     font-family: "JetBrains Mono";
-    font-size: .75rem;
-
+    font-weight: bold;
+    font-size: 11px;
     min-height: 0;
-    padding-top: 0;
-    padding-bottom: 0;
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, .01);
+    background-color: @background;
+    /* Let the chips float! */
 }
 
-.modules-left,
-.modules-center,
-.modules-right {
-    background-color: transparent;
-    border-radius: 8px;
-}
+/* --- THE UNIFIED PILLS --- */
 
-#custom-user-label {
-    font-size: 1rem;
-    padding-right: 0;
-    margin-right: 0;
-}
-
-#custom-user {
-    padding-left: 0;
-    margin-left: 0;
-}
-
-#custom-user-label,
+/* Select ALL your center modules here */
 #custom-user,
-#workspaces,
-#custom-wp-label,
 #wireplumber,
-#custom-br-label,
 #custom-brightness,
-#custom-mem-label,
 #memory,
-#custom-cpu-label,
 #cpu,
-#custom-nw-label,
 #network,
-#custom-bat-label,
 #battery,
-#custom-loc-label,
 #language,
 #tray,
 #custom-time,
-#clock,
-#group-power {
-    background-color: @none;
+#clock {
+    background-color: @secondary_container;
+    color: @on_secondary_container;
+
+    border-radius: 24px;
+    /* Fully rounded pill */
+    padding: 2px 12px;
+    /* Comfortable padding inside */
+    margin: 4px 2px;
+    /* Space between the pills */
+
+    /* Optional: Material Shadow */
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
-/* first labels of group */
-#custom-wp-label,
-#custom-user-label,
-#tray {
-    border-radius: 8px 0 0 8px;
-    padding-left: 1em;
-    padding-right: 0.5em;
-    color: @label;
+/* Hover Effect for all pills */
+#custom-user:hover,
+#wireplumber:hover,
+#custom-brightness:hover,
+#memory:hover,
+#cpu:hover,
+#network:hover,
+#battery:hover,
+#language:hover,
+#tray:hover,
+#custom-time:hover,
+#clock:hover {
+    background-color: @primary;
+    color: @on_primary;
 }
 
-/* left modules */
-#custom-user {
-    border-radius: 0 2px 2px 0;
-    padding-left: 0.5em;
-    padding-right: 1em;
-    color: @value;
-}
+/* --- WORKSPACES --- */
 
 #workspaces {
-    margin-left: .25em;
-    padding-left: .5em;
-    padding-right: .5em;
-    border-radius: 2px 8px 8px 2px;
+    background-color: @surface_container;
+    border-radius: 24px;
+    margin: 4px 4px 4px 8px;
+    /* Extra margin on left edge */
+    padding: 4px;
 }
 
 #workspaces button {
-    padding: 0;
-    font-style: italic;
-    color: @value;
+    padding: 0px 4px;
+    border-radius: 20px;
+    color: @on_surface;
+    background-color: transparent;
+    transition: all 0.3s ease;
 }
 
 #workspaces button.active {
-    font-style: normal;
-    font-weight: 900;
-    color: @label;
+    background-color: @primary;
+    color: @on_primary;
+    min-width: 30px;
 }
 
-#custom-br-label,
-#custom-mem-label,
-#custom-cpu-label,
-#custom-nw-label,
-#custom-bat-label,
-#custom-loc-label {
-    padding-left: 1em;
-    padding-right: 0.5em;
-    color: @label;
-    border-radius: 4px 0 0 4px;
-    margin-left: .25em;
+#workspaces button:hover {
+    background-color: @surface_container_highest;
 }
 
-#wireplumber,
-#custom-brightness,
-#memory,
-#cpu,
-#network,
-#battery {
-    border-radius: 0 4px 4px 0;
-    padding-left: 0.5em;
-    padding-right: 1em;
-    color: @value;
-}
-
-#language {
-    border-radius: 2px 8px 8px 0px;
-    padding-left: 0.5em;
-    padding-right: 1em;
-    color: @value;
-}
-
-/* right modules */
-#tray {
-    border-radius: 8px 4px 4px 8px;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-left: 0.25em;
-}
-
-#custom-time,
-#clock {
-    border-radius: 4px;
-    padding-left: 1em;
-    padding-right: 1em;
-    margin-left: 0.25em;
-    color: @value;
-}
+/* --- POWER GROUP (Red Warning Pill) --- */
 
 #group-power {
-    margin-left: 0.25em;
-    border-radius: 4px 8px 8px 4px;
-    padding-left: 1em;
-    padding-right: 1em;
-    color: @label;
+    background-color: @error_container;
+    color: @on_error_container;
+    border-radius: 24px;
+    margin: 4px 8px 4px 4px;
+    padding: 6px 10px;
 }
 
-.not-power>* {
-    font-size: 1.2em;
-    margin-right: 1em;
+#custom-power,
+#custom-quit,
+#custom-lock,
+#custom-reboot {
+    padding: 0 8px;
+    color: @on_error_container;
 }
