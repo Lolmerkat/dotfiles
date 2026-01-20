@@ -67,7 +67,7 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0px 4px;
+    padding: 0px 0px;
     border-radius: 20px;
     color: @on_surface;
     background-color: transparent;
@@ -75,6 +75,7 @@ window#waybar {
 }
 
 #workspaces button.active {
+    padding: 0px 4px;
     background-color: @primary;
     color: @on_primary;
     min-width: 30px;
