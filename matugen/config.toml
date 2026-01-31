@@ -19,3 +19,12 @@ post_hook = "hyprctl reload"
 input_path = "~/.config/matugen/templates/wezterm/wezterm_theme.toml"
 output_path = "~/.config/wezterm/colors/matugen_theme.toml"
 post_hook = "touch ~/.config/wezterm/wezterm.lua"
+
+[templates.gtk3]
+input_path = "~/.config/matugen/templates/gtk/gtk-colors.css"
+output_path = "~/.config/gtk-3.0/colors.css"
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = "~/.config/matugen/templates/gtk/gtk-colors.css"
+output_path = "~/.config/gtk-4.0/colors.css"
