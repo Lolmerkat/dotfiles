@@ -89,7 +89,7 @@
             "default": ["󱊡", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
             "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
         },
-        "format-charging": "\udb85\udc0b {capacity}%",
+        "format-charging": "{icon}",
         "tooltip-format-discharging": "Capacity: {capacity}%\nWattage: {power}W\nRemaining Time: {time}\nCycles: {cycles}\nHealth: {health}%",
         "tooltip-format-charging": "Capacity: {capacity}%\nWattage: {power}W\nTime until charged: {time}\nCycles: {cycles}\nHealth: {health}%"
     },
@@ -102,8 +102,9 @@
 
     "network": {
         "format": "󰖩",
-        "format-alt": "\uf1eb {ifname}: {ipaddr}",
+        "format-alt": "󰖩{ifname}",
         "format-disconnected": "󰖪",
+        "format-disabled": "󰀝",
         "tooltip-format": "SSID: {essid}\nInterface: {ifname}\nIPv4: {ipaddr}\n\nFreq: {frequency}GHz\n  Up: {bandwidthUpBits}\n  Down: {bandwidthDownBits}",
         "max-length": 24
     },

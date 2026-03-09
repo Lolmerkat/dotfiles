@@ -84,6 +84,7 @@ window#waybar {
 
 #group-power {
     background-color: @error_container;
+    color: @on_error_container;
     border-radius: 2em;
     padding-left: 6px;
     padding-right: 6px;
