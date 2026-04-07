@@ -28,3 +28,11 @@ post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings s
 [templates.gtk4]
 input_path = "~/.config/matugen/templates/gtk/gtk-colors.css"
 output_path = "~/.config/gtk-4.0/colors.css"
+
+[templates.quickshell]
+input_path = "~/.config/matugen/templates/quickshell/colors.json"
+output_path = "~/.local/state/quickshell/generated/colors.json"
+
+[templates.obsidian]
+input_path = "~/.config/matugen/templates/obsidian.css"
+output_path = "~/vaults/notes/.obsidian/snippets/matugen.css"
