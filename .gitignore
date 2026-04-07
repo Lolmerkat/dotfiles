@@ -1,3 +1,10 @@
 nchat/
+nchat/ui.conf
 nchat/log.txt
 nchat/log.txt.1
+
+rofi/themes/colors.rasi
+
+waybar/colors.css
+
+hypr/colors.conf

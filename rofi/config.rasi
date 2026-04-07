@@ -25,5 +25,5 @@ configuration{
     kb-mode-complete: "Control+o";
 }
 
-@import "layout.rasi"
-@import "themes/cyberdream.rasi"
+// @import "layout.rasi"
+@import "themes/material.rasi"

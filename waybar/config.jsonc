@@ -1,129 +1,114 @@
 {
     "layer": "top",
     "reload_style_on_change": true,
+    "height": 24,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+
+    // --- MODULES CONFIGURATION ---
     "modules-left": [
-        "custom/user-label",
         "custom/user",
         "hyprland/workspaces"
     ],
     "modules-center": [
-        "custom/wp-label", "wireplumber",
-        "custom/br-label", "custom/brightness",
-        "custom/mem-label", "memory",
-        "custom/cpu-label", "cpu",
-        "custom/nw-label", "network",
-        "custom/bat-label", "battery",
-        "custom/loc-label", "hyprland/language"
+        "wireplumber",
+        "custom/brightness",
+        "memory",
+        "cpu",
+        "network",
+        "battery",
+        "hyprland/language"
     ],
     "modules-right": [
         "tray",
         "custom/time",
-        "clock", /* date */
+        "clock",
         "group/group-power"
     ],
-    "height": 24,
-    "margin-top": 8,
-    "margin-left": 8,
-    "margin-right": 8,
-    "custom/user-label": {
-        "format": "󰣇",
-        "tooltip": false
-    },
+
+    // --- INDIVIDUAL MODULE SETTINGS ---
+
     "custom/user": {
-        "format": "{}",
+        "format": "󰣇 {}",
         "exec": "~/.config/waybar/scripts/user.sh",
         "tooltip": false,
         "interval": "once"
     },
+
     "hyprland/workspaces": {
         "sort-by-number": true,
         "active-only": false,
         "format": "{name}",
         "on-click": "activate"
     },
-    "custom/wp-label": {
-        "format": "\udb80\udecb",
-        "tooltip": false
-    },
+
     "wireplumber": {
-        "format": "{volume}%",
-        "format-muted": "\uf467",
+        "format": "\udb80\udecb {volume}%",
+        "format-muted": "\uf467 Muted",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "scroll-step": 5
     },
-    "custom/br-label": {
-        "format": "\uf522",
-        "tooltip": false
-    },
+
     "custom/brightness": {
-        "format": "{}%",
+        "format": "\uf522 {}%",
         "exec": "/home/jan/.config/waybar/scripts/brightness.sh",
         "interval": 1,
         "tooltip": false,
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
     },
-    "custom/mem-label": {
-        "format": "\uefc5",
-        "tooltip": false
-    },
+
     "memory": {
-        "format": "{percentage}%",
+        "format": "\uefc5 {percentage}%",
         "tooltip-format": "RAM: {used} GiB / {avail} GiB\nSwap: {swapUsed} GiB / {swapAvail} GiB"
     },
-    "custom/cpu-label": {
-        "format": "\uf4bc",
-        "tooltip": false
-    },
+
     "cpu": {
-        "format": "{usage}%"
+        "format": "\uf4bc {usage}%"
     },
-    "custom/nw-label": {
-        "format": "\uf1eb",
-        "tooltip": false
-    },
+
     "network": {
-        "format": "{essid}",
-        "format-alt": "{ifname}: {ipaddr}",
-        "format-disconnected": "disconnected",
+        "format": "\uf1eb {essid}",
+        "format-alt": "\uf1eb {ifname}: {ipaddr}",
+        "format-disconnected": "\uf1eb Disconnected",
         "tooltip-format": "Interface: {ifname}\nIPv4: {ipaddr}\n\nSSID: {essid}\nFreq: {frequency}GHz\n  Up: {bandwidthUpBits}\n  Down: {bandwidthDownBits}",
         "max-length": 24
     },
-    "custom/bat-label": {
-        "format": "\uee9e",
-        "tooltip": false
-    },
+
     "battery": {
         "interval": 5,
-        "format": "{capacity}%",
-        "format-charging": "{capacity}% \udb85\udc0b",
+        "format": "\uee9e {capacity}%",
+        "format-charging": "\udb85\udc0b {capacity}%",
         "tooltip-format-discharging": "Capacity: {capacity}%\nWattage: {power}W\nRemaining Time: {time}\nCycles: {cycles}\nHealth: {health}%",
         "tooltip-format-charging": "Capacity: {capacity}%\nWattage: {power}W\nTime until charged: {time}\nCycles: {cycles}\nHealth: {health}%"
     },
-    "custom/loc-label": {
-        "format": "\uf0ac",
-        "tooltip": false
-    },
+
     "hyprland/language": {
-        "format": "{}",
+        "format": "\uf0ac {}",
         "format-en": "en",
         "format-de": "de",
         "keyboard-name": "at-translated-set-2-keyboard"
     },
+
     "tray": {
-        "spacing": 5,
+        "spacing": 5
     },
+
     "custom/time": {
-        "format": {},
+        "format": "{}",
         "exec": "~/.config/waybar/scripts/time.sh",
         "interval": 1,
         "tooltip": false
     },
+
     "clock": {
         "interval": 1,
         "format": "{:%d %b %Y}",
         "tooltip": false
     },
+
+    // --- POWER GROUP ---
     "group/group-power": {
         "orientation": "inherit",
         "drawer": {
@@ -157,5 +142,5 @@
         "format": "󰜉",
         "tooltip": false,
         "on-click": "reboot"
-    },
+    }
 }
