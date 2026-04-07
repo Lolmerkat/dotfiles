@@ -1,104 +1,113 @@
 @import "colors.css";
 
 * {
-    font-family: "JetBrains Mono";
-    font-weight: bold;
-    font-size: 11px;
-    min-height: 0;
+    font-family: "JetBrainsMono NFM";
 }
 
 window#waybar {
-    background-color: @background;
-    /* Let the chips float! */
+    font-size: 12px;
+    background-color: @surface;
+    border-radius: 2em;
+    border: 1px solid @outline;
+    margin: 6px 0;
 }
 
-/* --- THE UNIFIED PILLS --- */
+#language {
+    color: @secondary;
+    padding-left: 6px;
+    border-radius: 2em;
+    margin-left: 3px;
+    margin-right: 6px;
+}
 
-/* Select ALL your center modules here */
-#custom-user,
-#wireplumber,
-#custom-brightness,
-#memory,
-#cpu,
-#network,
-#battery,
-#language,
-#tray,
-#custom-time,
 #clock {
-    background-color: @secondary_container;
-    color: @on_secondary_container;
-
-    border-radius: 24px;
-    /* Fully rounded pill */
-    padding: 2px 12px;
-    /* Comfortable padding inside */
-    margin: 4px 2px;
-    /* Space between the pills */
-
-    /* Optional: Material Shadow */
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+    color: @primary;
+    padding-left: 12px;
+    padding-right: 6px;
+    border-radius: 2em;
 }
 
-/* Hover Effect for all pills */
-#custom-user:hover,
-#wireplumber:hover,
-#custom-brightness:hover,
-#memory:hover,
-#cpu:hover,
-#network:hover,
-#battery:hover,
-#language:hover,
-#tray:hover,
-#custom-time:hover,
-#clock:hover {
-    background-color: @primary;
-    color: @on_primary;
+/* ICON ONLY MODULES */
+#cpu,
+#memory,
+#network,
+#group-power,
+#backlight,
+#wireplumber {
+    color: @primary;
+    font-size: 20px;
+    margin-left: 6px;
+    margin-right: 6px;
 }
 
-/* --- WORKSPACES --- */
+#battery {
+    color: @primary;
+    font-size: 16px;
+    margin-left: 6px;
+    margin-right: 6px;
+}
+
+#language {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#clock {
+    padding-right: 12px;
+}
 
 #workspaces {
-    background-color: @surface_container;
-    border-radius: 24px;
-    margin: 4px 4px 4px 8px;
-    /* Extra margin on left edge */
-    padding: 4px;
+    border-radius: 2em;
+    background-color: @surface_container_high;
+    margin: 6px 0;
+    padding: 0;
 }
 
 #workspaces button {
-    padding: 0px 0px;
-    border-radius: 20px;
-    color: @on_surface;
-    background-color: transparent;
-    transition: all 0.3s ease;
+    font-size: 16px;
+    background-color: @transparent;
+    padding: 0 3px;
+    color: @on_surface_variant;
+}
+
+#workspaces button:first-child {
+    padding-left: 6px;
+}
+
+#workspaces button:last-child {
+    padding-right: 6px;
 }
 
 #workspaces button.active {
-    padding: 0px 4px;
-    background-color: @primary;
-    color: @on_primary;
-    min-width: 30px;
+    color: @primary;
 }
-
-#workspaces button:hover {
-    background-color: @surface_container_highest;
-}
-
-/* --- POWER GROUP (Red Warning Pill) --- */
 
 #group-power {
     background-color: @error_container;
     color: @on_error_container;
-    border-radius: 24px;
-    margin: 4px 8px 4px 4px;
-    padding: 6px 10px;
+    border-radius: 2em;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: 6px;
 }
 
-#custom-power,
+#custom-power {
+    font-size: 16px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
 #custom-quit,
 #custom-lock,
 #custom-reboot {
-    padding: 0 8px;
-    color: @on_error_container;
+    font-size: 16px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.modules-right {
+    background-color: @surface_container;
+    margin: 1px;
+    padding-left: 6px;
+    border-radius: 2em;
 }
